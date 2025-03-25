@@ -11,7 +11,8 @@ export default function Page() {
           <Image
             className={styles.avatarImage}
             src="/profile-thumbnail.png"
-            alt="Sarah Dole's Profile Picture"
+            // fix unescaped apostrophe
+            alt={`Sarah Dole's Profile Picture`}
             width={48}
             height={48}
             priority

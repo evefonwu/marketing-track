@@ -11,7 +11,6 @@ export default function Page() {
           <Image
             className={styles.avatarImage}
             src="/profile-thumbnail.png"
-            // fix unescaped apostrophe
             alt={`Sarah Dole's Profile Picture`}
             width={48}
             height={48}
@@ -30,9 +29,9 @@ export default function Page() {
       {/* use blockquote, meaning a quotation element, instead of generic div */}
       <blockquote>
         <p className={styles.testimonial}>
-          I've been searching for high-quality abstract images for my design
+          {`I've been searching for high-quality abstract images for my design
           projects, and I'm thrilled to have found this platform. The variety
-          and depth of creativity are astounding!
+          and depth of creativity are astounding!`}
         </p>
       </blockquote>
     </div>

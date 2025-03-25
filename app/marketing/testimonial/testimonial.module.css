@@ -1,0 +1,84 @@
+.card {
+  width: 340px;
+  height: fit-content;
+  /* maintain spacing between child items: who and testimonial */
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  background-color: #ffffff;
+  padding: 24px;
+  border-radius: 8px;
+  box-shadow: 0px 1px 2px -1px rgb(0 0 0 / 0.1), 0px 1px 3px 0 rgb(0 0 0 / 0.1);
+}
+
+.who {
+  /* maintain spacing between child items: profile and info */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+  align-self: stretch;
+}
+
+.avatar {
+  /* maintain min-width so this image never shrinks */
+  min-width: 48px;
+  min-height: 48px;
+}
+
+.avatarImage {
+  min-width: 100%;
+  min-height: 100%;
+  object-fit: cover;
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  /* maintain spacing between child items: name and username */
+  gap: 1px;
+  flex: 1;
+}
+
+.name {
+  font-family: "Noto Sans";
+  font-weight: 600;
+  /* font-size: 18px; */
+  font-size: 1.125rem;
+  line-height: 28px;
+  text-align: justify;
+  color: #171717;
+  /* allowable space = /* limit name to 1 line of text... */
+  width: 228px;
+}
+
+.singleLine {
+  /* limit name to 1 line of text... */
+  /* https://developer.mozilla.org/en-US/docs/Web/CSS/line-clamp */
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+  line-clamp: 1;
+  overflow: hidden;
+  /* show ellipsis... */
+  text-overflow: ellipsis;
+  white-space: wrap;
+}
+
+.username {
+  font-family: "Noto Sans";
+  font-weight: 400;
+  /* font-size: 14px; */
+  font-size: 0.875rem;
+  line-height: 20px;
+  color: #525252;
+}
+
+.testimonial {
+  font-family: "Noto Sans";
+  font-weight: 400;
+  /* font-size: 16px; */
+  font-size: 1rem;
+  line-height: 24px;
+  color: #525252;
+}

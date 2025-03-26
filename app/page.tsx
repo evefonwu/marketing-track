@@ -12,6 +12,11 @@ const links = [
     name: "Blog Card",
     href: "./blog",
   },
+  {
+    id: 3,
+    name: "Profile Card",
+    href: "./profile",
+  },
 ];
 export default function Home() {
   return (

@@ -1,0 +1,121 @@
+.card {
+  margin-top: 120px;
+  width: 340px;
+  display: flex;
+  height: fit-content;
+  flex-direction: column;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0px 1px 2px 0 rgb(0 0 0 / 0.06), 0px 1px 3px 0 rgb(0 0 0 / 0.1);
+}
+
+.coverImage {
+  align-self: stretch;
+  height: 288px;
+  width: 340px;
+  object-fit: cover;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+}
+
+.details {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  align-self: stretch;
+  padding: 24px 16px;
+}
+
+.detailsHeading {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  align-self: stretch;
+}
+
+.detailsContent {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  align-self: stretch;
+}
+
+.badge {
+  background-color: #f0fdf4;
+  padding: 2px 8px;
+  border-radius: 9999px;
+  border-width: 1px;
+  border-style: solid;
+  border-color: #bbf7d0;
+  width: fit-content;
+}
+
+.tagText {
+  font-family: "Noto Sans";
+  font-weight: 400;
+  font-size: 0.875rem;
+  line-height: 20px;
+  text-align: center;
+  color: #15803d;
+}
+
+.title {
+  font-family: "Noto Sans";
+  font-weight: 600;
+  font-size: 1.125rem;
+  line-height: 28px;
+  color: #171717;
+}
+
+.description {
+  font-family: "Noto Sans";
+  font-weight: 500;
+  font-size: 1rem;
+  line-height: 24px;
+  color: #525252;
+  width: fit-content;
+}
+
+.ctaLink {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 6px;
+}
+
+.ctaText {
+  text-align: center;
+  padding: 0px 2px;
+  color: #4338ca;
+}
+
+.ctaRightArrow {
+  width: 20px;
+  height: 20px;
+}
+
+.detailsContent a:link {
+  font-family: "Noto Sans";
+  font-weight: 500;
+  font-size: 1rem;
+  line-height: 24px;
+  color: #4338ca;
+  text-decoration: none;
+  width: fit-content;
+}
+
+/* test: hover over link */
+.detailsContent a:hover {
+  cursor: pointer;
+  color: #3730a3;
+}
+
+/* test: tab to keyboard navigate to link */
+/* or click on link */
+.detailsContent a:focus-visible,
+.detailsContent a:focus {
+  color: #3730a3;
+  outline: 0px;
+  border-radius: 4px;
+  box-shadow: 0px 0px 0px 4px rgb(0.23 0.3 1 / 0.12);
+}

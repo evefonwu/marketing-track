@@ -21,9 +21,19 @@ body {
   /* horizontally center card within */
   display: flex;
   justify-content: center;
-  /* fix card within with a distance of 200px from the top of the page */
-  padding: 200px 0px;
   background-image: linear-gradient(to bottom, #f9fafb, #d2d6db);
+}
+
+/* limit name to 1 line of text... */
+/* https://developer.mozilla.org/en-US/docs/Web/CSS/line-clamp */
+.singleLine {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+  line-clamp: 1;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: wrap;
 }
 
 .credits {

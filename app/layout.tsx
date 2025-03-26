@@ -1,5 +1,6 @@
 import "./globals.css";
-// import { noto } from "@/app/ui/fonts";
+// Noto Sans font
+import { noto } from "@/app/ui/fonts";
 import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Marketing Track",
@@ -13,8 +14,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      {/* <body className={noto.className}> */}
-      <body>
+      <body className={noto.className}>
         {children}
         <footer>
           <div className="credits" data-gfe-screenshot-exclude="true">

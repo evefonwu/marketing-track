@@ -53,8 +53,7 @@
 .tagText {
   font-family: "Noto Sans";
   font-weight: 400;
-  /* font-size: 0.875rem; */
-  font-size: 14px;
+  font-size: 0.875rem;
   line-height: 20px;
   text-align: center;
   color: #15803d;
@@ -63,8 +62,7 @@
 .title {
   font-family: "Noto Sans";
   font-weight: 600;
-  /* font-size: 1.125rem; */
-  font-size: 18px;
+  font-size: 1.125rem;
   line-height: 28px;
   color: #171717;
 }
@@ -72,8 +70,7 @@
 .description {
   font-family: "Noto Sans";
   font-weight: 500;
-  /* font-size: 1rem; */
-  font-size: 16px;
+  font-size: 1rem;
   line-height: 24px;
   color: #525252;
   width: fit-content;
@@ -100,8 +97,7 @@
 .detailsContent a:link {
   font-family: "Noto Sans";
   font-weight: 500;
-  /* font-size: 1rem; */
-  font-size: 16px;
+  font-size: 1rem;
   line-height: 24px;
   color: #4338ca;
   text-decoration: none;

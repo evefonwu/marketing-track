@@ -9,16 +9,14 @@ export default function Page() {
 
   return (
     <figure className={styles.card}>
-      <div className={styles.cover}>
-        <Image
-          src={`/spacejoy-YqFz7UMm8qE-unsplash.jpg`}
-          alt={`Cover image for article ${title}`}
-          className={styles.coverImage}
-          width={340}
-          height={288}
-          priority={true}
-        />
-      </div>
+      <Image
+        src={`/spacejoy-YqFz7UMm8qE-unsplash.jpg`}
+        alt={`Cover image for article ${title}`}
+        className={styles.coverImage}
+        width={340}
+        height={288}
+        priority={true}
+      />
       <figcaption className={styles.details}>
         <div className={styles.detailsHeading}>
           <div className={styles.badge}>

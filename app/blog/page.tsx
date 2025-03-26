@@ -4,7 +4,7 @@ import styles from "./blog.module.css";
 
 export default function Page() {
   const title = `Top 5 Living Room Inspirations`;
-  const description = `Curated vibrants colors for your living, make it pop & calm in the same time.`;
+  const description = `Curated vibrants colors for your living, make it pop & calm at the same time.`;
   const tag = `Interior`;
 
   return (

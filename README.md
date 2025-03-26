@@ -1,36 +1,19 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Marketing Track Tasks
 
-## Getting Started
+These are FrontEnd Dev Challenges from [GreatFrontEnd Projects](https://www.greatfrontend.com/projects?ref=challenges).
 
-First, run the development server:
+### What I've Completed
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+- Testimonial Card
+- Blog Card
+- Profile Card
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+[Link to Completed Challenges](https://marketing-track.vercel.app/)
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### How I'm Approaching the Tasks
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+The way I am approaching the tasks is to break it into several parts.
 
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- First, I study the provided Figma design. Then I outline the HTML structure from outer containers in. I use the GFE provided Figma plugin to get most of the styles in CSS that I will modify and add styles to.
+- In the second part, I get into styling the nested elements within the containers.
+- Then, I check the style guide for typography and different button and link states and add these in.

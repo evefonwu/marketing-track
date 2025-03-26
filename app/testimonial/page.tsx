@@ -11,6 +11,7 @@ export default function Page() {
           <Image
             className={styles.avatarImage}
             src="/profile-thumbnail.png"
+            // fix unescaped apostrophe
             alt={`Sarah Dole's Profile Picture`}
             width={48}
             height={48}
@@ -18,11 +19,8 @@ export default function Page() {
           />
         </div>
         <figcaption className={styles.info}>
-          {/* test line-clamp: */}
-          {/* <p className={`${styles.name} ${styles.singleLine}`}>
-            SarahDoleSarahDoleSarahDole SarahDoleSarahDole
-          </p> */}
-          <p className={styles.name}>Sarah Dole</p>
+          {/* test line-clamp: SarahDoleSarahDoleSarahDole SarahDoleSarahDole */}
+          <p className={`${styles.name} ${styles.singleLine}`}>Sarah Dole</p>
           <p className={styles.username}>@sarahdole</p>
         </figcaption>
       </figure>

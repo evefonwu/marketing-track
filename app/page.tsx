@@ -29,9 +29,9 @@ export default function Home() {
       <main className={styles.main}>
         <ul>
           {links.map((item) => (
-            <Link key={item.id} href={item.href}>
-              {item.name}
-            </Link>
+            <li key={item.id}>
+              <Link href={item.href}>{item.name}</Link>
+            </li>
           ))}
         </ul>
       </main>

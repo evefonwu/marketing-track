@@ -5,8 +5,10 @@
   /* width: 375px; */
   padding: 16px;
   min-height: 100svh;
-  margin-top: 56px;
+  /* margin-top: 56px; */
   /* margin-bottom: 100px; */
+  display: flex;
+  flex-grow: 1;
 }
 
 .outerContainer {

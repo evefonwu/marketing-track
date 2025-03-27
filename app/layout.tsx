@@ -14,6 +14,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      {/* Noto Sans font */}
       <body className={noto.className}>
         {children}
         <footer>

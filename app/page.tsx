@@ -17,6 +17,11 @@ const links = [
     name: "Profile Card",
     href: "./profile",
   },
+  {
+    id: 4,
+    name: "Hero Section",
+    href: "./hero",
+  },
 ];
 export default function Home() {
   return (

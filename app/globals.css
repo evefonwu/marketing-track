@@ -15,6 +15,10 @@ body {
   font-size: 16px;
 }
 
+ul {
+  list-style: none;
+}
+
 /* mobile-first approach (width 375px and up) */
 
 body {

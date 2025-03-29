@@ -159,7 +159,8 @@
     gap: 32px;
     align-self: stretch;
     /* padding: 96px; */
-    padding: 64px;
+    /* padding: 64px; */
+    padding: 16px;
   }
 
   .imageContainer {

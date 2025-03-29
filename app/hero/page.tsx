@@ -1,19 +1,19 @@
-import styles from "./hero.module.css";
+import gridStyles from "./grid.module.css";
+import styles from "./content.module.css";
 import Image from "next/image";
 
 const title = `Well crafted abstract images`;
 const description = `High quality abstract images for your projects, wallpaper and presentations.`;
 const imageAlt = "Prism Photo";
 
-// import image file and Next.js automatically determines dimensions
 import heroImage from "./prism.png";
 
 export default function Page() {
   return (
-    <section className={styles.sectionHero}>
-      <div className={styles.outerContainer}>
-        <div className={styles.innerContainer}>
-          <div className={styles.heroText}>
+    <div className={styles.pageContent}>
+      <div className={`${styles.section}`}>
+        <div className={gridStyles.gridParent}>
+          <div className={`${gridStyles.left} ${styles.heroText}`}>
             <div className={styles.intro}>
               <h1 className={styles.title}>{title}</h1>
               <p className={styles.description}>{description}</p>
@@ -27,10 +27,9 @@ export default function Page() {
               </button>
             </div>
           </div>
-          <div className={styles.imageContainer}>
+          <div className={`${gridStyles.right} ${styles.imageContainer}`}>
             <Image
               className={styles.heroImage}
-              // use imported image file
               src={heroImage}
               alt={imageAlt}
               priority
@@ -38,6 +37,6 @@ export default function Page() {
           </div>
         </div>
       </div>
-    </section>
+    </div>
   );
 }

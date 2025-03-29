@@ -1,15 +1,6 @@
-/* Mobile-first (width 375px and up) */
+/* Mobile-first 375px and up */
 
-.sectionHero {
-  /* the entire page  */
-  /* width: 375px; */
-  padding: 16px;
-  min-height: 100svh;
-  display: flex;
-  flex-grow: 1;
-}
-
-.outerContainer {
+.pageContent {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -18,41 +9,38 @@
   background-image: linear-gradient(to bottom, #f9fafb, #edf0f3);
   border-radius: 4px;
   box-shadow: 0px 1px 2px 0 rgb(0 0 0 / 0.05);
+  /* page content container with background gradient, centered */
 }
 
-.innerContainer {
-  /* border: 3px solid red; */
-  padding: 48px 12px;
-
-  /* mobile layout: flex 1-column */
+.section {
   display: flex;
   flex-direction: column;
-  gap: 48px;
-
-  /* will switch to grid layout in desktop and be the direct parent of grid items */
+  justify-content: center;
+  align-items: center;
+  align-self: stretch;
+  padding: 48px 12px;
+  /* gap: 48px; achieve this with padding/margin */
+  /* inner section container vertically centered with padding and gap between heroText and imageContainer */
 }
 
 .heroText {
-  /* a main grid layout section */
-  grid-area: heroText;
-  /* border: 3px solid tomato; */
-
   display: flex;
   flex-direction: column;
   justify-content: center;
   gap: 32px;
-  /* mind the gap changes between 3 breakpoints */
 }
 
 .imageContainer {
-  /* a main grid layout section */
-  /* border: 3px solid green; */
-  grid-area: imageContainer;
-
   display: flex;
   justify-content: center;
   align-items: center;
+  align-self: stretch;
+  object-fit: cover;
+  padding: 32px 0px;
   border-radius: 8px;
+  /* gap between with heroText */
+  /* margin-top: 48px; */
+  margin-top: 16px;
 }
 
 .heroImage {
@@ -72,53 +60,53 @@
 .title {
   font-family: "Noto Sans";
   font-weight: 600;
-  font-size: 36px;
-  line-height: 40px;
-  /* font-size: 2.25rem;
-  line-height: 2.5rem; */
+  font-size: 2.25rem;
+  line-height: 2.5rem;
   color: #171717;
 }
 
 .description {
   font-family: "Noto Sans";
   font-weight: 400;
-  font-size: 18px;
-  line-height: 28px;
-  /* font-size: 1.125rem;
-  line-height: 1.75rem; */
+  font-size: 1.125rem;
+  line-height: 1.75rem;
   color: #525252;
 }
 
 .cta {
   display: flex;
-  /* justify-content: flex-start; */
   gap: 16px;
 }
 
-/* Tablets (768px and up) */
-@media (min-width: 768px) {
-  /* .sectionHero {
-    width: 768px;
-  } */
+/* Tablets */
 
-  .outerContainer {
-    background-image: linear-gradient(to bottom, #f9fafb, #edf0f3);
+@media (min-width: 768px) {
+  .pageContent {
     padding: 8px 0px;
     border-radius: 6px;
     box-shadow: 0px 2px 4px -1px rgb(0 0 0 / 0.06),
       0px 4px 6px -1px rgb(0 0 0 / 0.1);
   }
 
-  .innerContainer {
+  .section {
+    display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 32px;
     align-self: stretch;
     padding: 64px 16px;
+    /* gap: 32px; */
   }
 
   .heroText {
     gap: 64px;
+  }
+
+  .imageContainer {
+    padding: 64px 0px;
+    border-radius: 16px;
+    /* gap between with heroText */
+    /* margin-top: 32px; */
   }
 
   .intro {
@@ -128,17 +116,11 @@
   .title {
     font-size: 48px;
     line-height: 48px;
-    /* font-size: 3rem;
-    line-height: 3rem; */
   }
 
   .description {
-    /* fix width on tablet */
-    /* width: 488px; */
     font-size: 20px;
     line-height: 28px;
-    /* font-size: 1.125rem;
-    line-height: 1.75rem; */
   }
 
   .cta {
@@ -152,41 +134,41 @@
   }
 }
 
-/* Desktops (1440px and up) */
-@media (min-width: 1440px) {
-  /* .sectionHero {
-    width: 1440px;
-  } */
+/* Desktops */
 
-  .outerContainer {
+@media (min-width: 1440px) {
+  .pageContent {
     padding: 8px 0px;
     border-radius: 6px;
     box-shadow: 0px 4px 6px -2px rgb(0 0 0 / 0.05),
       0px 10px 15px -3px rgb(0 0 0 / 0.1);
   }
 
-  .innerContainer {
-    /* direct children of innerContainer must be: heroText and imageContainer */
-    display: grid;
-    grid-template-rows: 1fr;
-    grid-template-columns: 1fr 1fr;
-    grid-template-areas: "heroText imageContainer";
+  .section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     gap: 32px;
+    align-self: stretch;
+    /* extra padding */
     padding: 96px;
   }
 
+  .imageContainer {
+    padding: 64px 0px;
+    border-radius: 16px;
+    /* modify inherited margin */
+    margin-top: 0px;
+  }
+
   .title {
-    font-size: 60px;
-    line-height: 60px;
-    /* font-size: 3.75rem;
-    line-height: 3.75rem; */
+    font-size: 3.75rem;
+    line-height: 3.75rem;
   }
 
   .description {
-    font-size: 20px;
-    line-height: 28px;
-    /* font-size: 1.25rem;
-    line-height: 1.75rem; */
+    font-size: 1.25rem;
+    line-height: 1.75rem;
   }
 
   .cta {
@@ -203,7 +185,6 @@
   align-items: center;
   flex-grow: 1;
   padding: 12px 20px;
-  /* padding: 16px 24px; */
   border-radius: 4px;
   outline: 0;
   box-shadow: 0px 1px 2px 0 rgb(0 0 0 / 0.06), 0px 1px 3px 0 rgb(0 0 0 / 0.1);
@@ -232,7 +213,6 @@
   outline: 0;
   border: 0;
   cursor: not-allowed;
-  /* box-shadow: none; */
 }
 
 /* secondary buttons  */
@@ -260,16 +240,11 @@
   outline: 0;
   border: 0;
   cursor: not-allowed;
-  /* box-shadow: none; */
 }
 
 .button span {
   font-family: "Noto Sans";
   font-weight: 500;
-  /* font-size: 18px;
-  line-height: 28px; */
   font-size: 16px;
   line-height: 24px;
-  /* font-size: 1rem;
-  line-height: 1.5rem; */
 }

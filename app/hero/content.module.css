@@ -60,16 +60,20 @@
 .title {
   font-family: "Noto Sans";
   font-weight: 600;
-  font-size: 2.25rem;
-  line-height: 2.5rem;
+  /* font-size: 2.25rem;
+  line-height: 2.5rem; */
+  font-size: 36px;
+  line-height: 40px;
   color: #171717;
 }
 
 .description {
   font-family: "Noto Sans";
   font-weight: 400;
-  font-size: 1.125rem;
-  line-height: 1.75rem;
+  /* font-size: 1.125rem;
+  line-height: 1.75rem; */
+  font-size: 18px;
+  line-height: 28px;
   color: #525252;
 }
 
@@ -116,11 +120,15 @@
   .title {
     font-size: 48px;
     line-height: 48px;
+    /* font-size: 3rem;
+    line-height: 3rem; */
   }
 
   .description {
     font-size: 20px;
     line-height: 28px;
+    /* font-size: 1.125rem;
+    line-height: 1.75rem; */
   }
 
   .cta {
@@ -150,25 +158,29 @@
     align-items: center;
     gap: 32px;
     align-self: stretch;
-    /* extra padding */
-    padding: 96px;
+    /* padding: 96px; */
+    padding: 64px;
   }
 
   .imageContainer {
     padding: 64px 0px;
-    border-radius: 16px;
+    /* border-radius: 16px; */
     /* modify inherited margin */
     margin-top: 0px;
   }
 
   .title {
-    font-size: 3.75rem;
-    line-height: 3.75rem;
+    font-size: 60px;
+    line-height: 60px;
+    /* font-size: 3.75rem;
+    line-height: 3.75rem; */
   }
 
   .description {
-    font-size: 1.25rem;
-    line-height: 1.75rem;
+    font-size: 20px;
+    line-height: 28px;
+    /* font-size: 1.25rem;
+    line-height: 1.75rem; */
   }
 
   .cta {

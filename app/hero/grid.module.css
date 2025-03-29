@@ -19,7 +19,7 @@
 @media (min-width: 768px) {
   .gridParent {
     /* Tablet 768px 100% 32px 6 32px */
-    padding: 0 32px;
+    /* padding: 0 32px; */
     width: 100%;
 
     grid-template-columns: repeat(6, minmax(0, 1fr));

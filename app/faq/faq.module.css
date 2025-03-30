@@ -1,0 +1,227 @@
+/* mobile-first (width 375px and up) */
+
+.page {
+  width: 100%;
+  /* border: 1px solid tomato; */
+  min-height: 100svh;
+  /* padding: 16px; */
+}
+
+.content {
+  /* border: 1px solid green; */
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  background-color: #ffffff;
+  border-radius: 4px;
+  box-shadow: 0px 1px 2px 0 rgb(0 0 0 / 0.05);
+}
+
+.section {
+  /* border: 1px solid blue; */
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  align-self: stretch;
+  padding: 48px 16px;
+}
+
+.faq {
+  /* border: 1px solid green; */
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+  align-self: stretch;
+}
+
+.faqHeader {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 20px;
+  align-self: stretch;
+}
+
+.contact {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 16px;
+  align-self: stretch;
+  background-color: #ffffff;
+  padding: 16px;
+  border-radius: 8px;
+  border-width: 1px;
+  border-style: solid;
+  border-color: #e5e5e5;
+  box-shadow: 0px 2px 4px -1px rgb(0 0 0 / 0.06),
+    0px 4px 6px -1px rgb(0 0 0 / 0.1);
+}
+
+/* nested elements */
+
+.faqHeader h1 {
+  font-family: "Noto Sans";
+  font-weight: 600;
+  font-size: 30px;
+  line-height: 36px;
+  text-align: center;
+  color: #171717;
+}
+
+.faqHeader p {
+  font-family: "Noto Sans";
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 28px;
+  text-align: center;
+  color: #525252;
+}
+
+/* faq content */
+
+.faqContent {
+  display: flex;
+  flex-direction: column;
+  align-self: stretch;
+}
+
+.contentRow {
+  align-self: stretch;
+  /* border: 1px solid tomato; */
+
+  /* gap between rowWords and accordion controls */
+  display: flex;
+  flex-direction: row;
+
+  gap: 46px;
+}
+
+.rowWords {
+  /* border: 1px solid green; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  /* gap between question and answer */
+  gap: 8px;
+  flex-grow: 1;
+}
+
+.rowWords h3 {
+  font-family: "Noto Sans";
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 28px;
+  color: #171717;
+}
+
+.rowWords h3:hover {
+  cursor: pointer;
+}
+
+.rowWords p {
+  font-family: "Noto Sans";
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: #525252;
+}
+
+.divider {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 57px;
+}
+
+.halfDivider {
+  height: 28px;
+}
+
+.dividerLine {
+  height: 1px;
+  background-color: #d4d4d4;
+}
+
+/* contact nested elements */
+
+.support {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 8px;
+  align-self: stretch;
+}
+
+.support h4 {
+  font-family: "Noto Sans";
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 28px;
+  color: #171717;
+}
+
+.support a {
+  font-family: "Noto Sans";
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+/* Tablets (768px and up) */
+@media (min-width: 768px) {
+  .page {
+    width: 100%;
+    padding: 32px;
+  }
+
+  .content {
+    border-radius: 6px;
+    box-shadow: 0px 2px 4px -1px rgb(0 0 0 / 0.06),
+      0px 4px 6px -1px rgb(0 0 0 / 0.1);
+  }
+
+  .section {
+    padding: 64px 16px;
+  }
+
+  .faq {
+    gap: 64px;
+  }
+
+  .contact {
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 16px;
+    padding: 32px;
+  }
+
+  .faqHeader h1 {
+    font-size: 48px;
+    line-height: 48px;
+  }
+
+  .faqHeader p {
+    font-size: 20px;
+    line-height: 28px;
+  }
+}
+
+/* Desktops (1440px and up) */
+@media (min-width: 1440px) {
+  .page {
+    width: 1280px;
+    padding: 32px;
+  }
+
+  .content {
+    border-radius: 6px;
+    box-shadow: 0px 4px 6px -2px rgb(0 0 0 / 0.05),
+      0px 10px 15px -3px rgb(0 0 0 / 0.1);
+  }
+
+  .section {
+    padding: 96px;
+  }
+}

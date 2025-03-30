@@ -28,6 +28,18 @@ const links = [
       "Responsive hero section for desktop, tablet, and mobile views",
     href: "./hero",
   },
+  {
+    id: 5,
+    name: "Mini component library",
+    description: `Reusable components, eg buttons`,
+    href: "./ui",
+  },
+  {
+    id: 6,
+    name: "FAQ Section",
+    description: `Responsive, accordion-style FAQ section`,
+    href: "./faq",
+  },
 ];
 export default function Home() {
   return (

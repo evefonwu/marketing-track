@@ -1,0 +1,10 @@
+.page {
+  display: flex;
+  align-items: center;
+  justify-items: center;
+}
+
+.grid {
+  display: grid;
+  gap: 18px;
+}

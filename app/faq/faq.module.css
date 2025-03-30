@@ -173,7 +173,7 @@
 @media (min-width: 768px) {
   .page {
     width: 100%;
-    padding: 32px;
+    /* padding: 32px; */
   }
 
   .content {
@@ -212,7 +212,7 @@
 @media (min-width: 1440px) {
   .page {
     width: 1280px;
-    padding: 32px;
+    /* padding: 32px; */
   }
 
   .content {

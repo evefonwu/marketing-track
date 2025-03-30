@@ -9,7 +9,7 @@ interface ButtonProps {
   fullWidth?: boolean;
   className?: string;
   children: ReactNode;
-  onClick?: () => {};
+  onClick?: () => void;
 }
 
 const Button = ({
@@ -22,6 +22,7 @@ const Button = ({
   children,
   onClick,
 }: ButtonProps) => {
+  // filter(Boolean): filter out any empty strings, undefined values, or other falsy values before joining the class names.
   const combinedClassNames = [
     styles.button,
     styles[variant],

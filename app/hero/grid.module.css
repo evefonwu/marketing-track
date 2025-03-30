@@ -7,6 +7,9 @@
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
   column-gap: 16px;
+
+  /* apply grid gap between left and right */
+  gap: 48px;
 }
 
 .left {
@@ -19,7 +22,7 @@
 @media (min-width: 768px) {
   .gridParent {
     /* Tablet 768px 100% 32px 6 32px */
-    /* padding: 0 32px; */
+    padding: 0 32px;
     width: 100%;
 
     grid-template-columns: repeat(6, minmax(0, 1fr));

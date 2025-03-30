@@ -11,11 +11,6 @@ body {
   overflow-x: hidden;
 }
 
-ol,
-ul {
-  list-style: none;
-}
-
 body {
   display: flex;
   justify-content: center;
@@ -36,4 +31,9 @@ body {
 .credits a {
   color: #000;
   font-weight: bold;
+}
+
+ol,
+ul {
+  list-style: none;
 }

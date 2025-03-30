@@ -93,8 +93,8 @@
   /* gap between rowWords and accordion controls */
   display: flex;
   flex-direction: row;
-
-  gap: 46px;
+  /* border: 1px solid green; */
+  gap: 16px;
 }
 
 .rowWords {

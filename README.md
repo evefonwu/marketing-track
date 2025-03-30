@@ -14,11 +14,11 @@ The way I am approaching the tasks is to break it into several parts.
 
 ### Implementing Responsive Design
 
-- Tip: Read the GFE provided guides on grid layout. Don't follow the Figma plugin code too closely for related layouts when using CSS grid because the plugin converts it to flexbox.
+- Tip: Read the GFE provided guides on grid layout. Don't follow the Figma plugin code too closely for related layouts when using CSS grid because the plugin converts it to CSS with flexbox layout mode.
 
-- Responsive Hero Section: This task required implementing responsive design for mobile, tablet and desktop views. I used CSS grid, grid rows and columns for the page layout. Media queries for the three main breakpoints, and Flexbox for item alignments.
+- Responsive Hero Section: This task required implementing responsive design for mobile, tablet and desktop views. I used CSS grid, grid rows and columns for the page layout, media queries for the three main breakpoints, and Flexbox for item alignments.
 
-### Implementing Client-side Interactivity
+### Client-side Interactivity
 
 - For the same buttons and links as previous tasks, I extracted the button and link styles into reusable React components: a Button component, and a Call-to-action Link component.
 

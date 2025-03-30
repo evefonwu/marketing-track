@@ -209,10 +209,9 @@
 
 /* Desktops (1440px and up) */
 @media (min-width: 1440px) {
-  .page {
-    width: 1280px;
-    /* padding: 32px; */
-  }
+  /* .page {
+    width: 1280px;    
+  } */
 
   .content {
     border-radius: 6px;

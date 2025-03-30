@@ -83,14 +83,17 @@ export default function Page() {
                       <div className={styles.contentRow}>
                         {/* <h3>{item.header}</h3> */}
                         <div className={styles.rowWords}>
-                          <h3 onClick={() => handleClick(item.id)}>
+                          <h3
+                            onClick={() => handleClick(item.id)}
+                            aria-role="button"
+                          >
                             {item.header}
                           </h3>
                           {item.hasVis && <p>{item.content}</p>}
                         </div>
                         <div
-                          className={styles.controls}
-                          // onClick={() => handleClick(item.id)}
+                          className={styles.accordionControls}
+                          onClick={() => handleClick(item.id)}
                         >
                           <Image
                             className={styles.expandIcon}

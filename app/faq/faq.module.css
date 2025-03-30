@@ -143,6 +143,10 @@
   background-color: #d4d4d4;
 }
 
+.accordionControls {
+  cursor: pointer;
+}
+
 /* contact nested elements */
 
 .support {

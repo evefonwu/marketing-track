@@ -37,7 +37,7 @@ const links = [
   {
     id: 6,
     name: "FAQ Section",
-    description: `Responsive, accordion-style FAQ section`,
+    description: `Interactive, accordion-style FAQ section`,
     href: "./faq",
   },
 ];

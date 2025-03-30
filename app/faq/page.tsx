@@ -72,7 +72,7 @@ export default function Page() {
           <div className={styles.faq}>
             <div className={styles.faqHeader}>
               <h1>Frequently asked questions</h1>
-              <p>Choose any questions you need</p>
+              <p>Get all your questions answered</p>
             </div>
             <div className={styles.faqContent}>
               <ul>

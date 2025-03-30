@@ -93,7 +93,6 @@
   /* gap between rowWords and accordion controls */
   display: flex;
   flex-direction: row;
-  /* border: 1px solid green; */
   gap: 16px;
 }
 

@@ -83,10 +83,7 @@ export default function Page() {
                       <div className={styles.contentRow}>
                         {/* <h3>{item.header}</h3> */}
                         <div className={styles.rowWords}>
-                          <h3
-                            onClick={() => handleClick(item.id)}
-                            aria-role="button"
-                          >
+                          <h3 onClick={() => handleClick(item.id)}>
                             {item.header}
                           </h3>
                           {item.hasVis && <p>{item.content}</p>}
@@ -106,6 +103,7 @@ export default function Page() {
                             } this FAQ item.`}
                             width={24}
                             height={24}
+                            priority
                           />
                         </div>
                       </div>

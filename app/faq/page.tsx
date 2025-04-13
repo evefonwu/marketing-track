@@ -1,5 +1,5 @@
 "use client";
-import { useState } from "react";
+import { useId, useState } from "react";
 import styles from "./faq.module.css";
 import Image from "next/image";
 import expandIcon from "./images/add-circle-line.png";
@@ -56,6 +56,7 @@ users.`,
 
 export default function Page() {
   const [data, setData] = useState<TFaqItem[]>(faqData);
+  const faqAccordionId = useId(); // useId can generate unique Id for the accordion
 
   const handleClick = (id: number) => {
     setData((prevData) => {
@@ -73,49 +74,62 @@ export default function Page() {
             <div className={styles.faqHeader}>
               <h1>Frequently asked questions</h1>
               <p>Choose any questions you need</p>
-              {/* Mobile: <p>Get all your questions answered</p> */}
             </div>
             <div className={styles.faqContent}>
               <ul>
                 {data.length > 0 &&
-                  data.map((item, index) => (
-                    <li key={item.id}>
-                      <div className={styles.contentRow}>
-                        {/* <h3>{item.header}</h3> */}
-                        <div className={styles.rowWords}>
-                          <h3 onClick={() => handleClick(item.id)}>
-                            {item.header}
-                          </h3>
-                          {item.hasVis && <p>{item.content}</p>}
+                  data.map((item, index) => {
+                    // ids to link header to its content, content to its header for assistive technologies
+                    const headerId = `${faqAccordionId}-header-${item.id}`;
+                    const panelId = `${faqAccordionId}-panel-${item.id}`;
+
+                    return (
+                      <li key={item.id}>
+                        <div className={styles.contentRow}>
+                          <div className={styles.rowWords}>
+                            {/* clickable item header is contained in a <button> element with aria state and property */}
+                            <button
+                              type="button"
+                              onClick={() => handleClick(item.id)}
+                              id={headerId}
+                              aria-expanded={item.hasVis}
+                              aria-controls={panelId}
+                            >
+                              {item.header}
+                            </button>
+                            {item.hasVis && (
+                              <p
+                                id={panelId}
+                                aria-labelledby={headerId}
+                                role="region"
+                              >
+                                {item.content}
+                              </p>
+                            )}
+                          </div>
+                          <div className={styles.accordionControls}>
+                            <Image
+                              aria-hidden={true}
+                              className={styles.expandIcon}
+                              src={item.hasVis ? collapseIcon : expandIcon}
+                              alt={`Accordion controls to ${
+                                item.hasVis ? "collapse" : "expand"
+                              } this FAQ item.`}
+                              width={24}
+                              height={24}
+                            />
+                          </div>
                         </div>
-                        <div
-                          className={styles.accordionControls}
-                          onClick={() => handleClick(item.id)}
-                        >
-                          <Image
-                            className={styles.expandIcon}
-                            aria-label={`Click to ${
-                              item.hasVis ? "collapse" : "expand"
-                            } this FAQ item.`}
-                            src={item.hasVis ? collapseIcon : expandIcon}
-                            alt={`Accordion controls to ${
-                              item.hasVis ? "collapse" : "expand"
-                            } this FAQ item.`}
-                            width={24}
-                            height={24}
-                            priority
-                          />
-                        </div>
-                      </div>
-                      {index < data.length - 1 ? (
-                        <div className={styles.divider}>
-                          <div className={styles.dividerLine}></div>
-                        </div>
-                      ) : (
-                        <div className={styles.halfDivider}></div>
-                      )}
-                    </li>
-                  ))}
+                        {index < data.length - 1 ? (
+                          <div className={styles.divider}>
+                            <div className={styles.dividerLine}></div>
+                          </div>
+                        ) : (
+                          <div className={styles.halfDivider}></div>
+                        )}
+                      </li>
+                    );
+                  })}
               </ul>
               <div className={styles.contact}>
                 <div className={styles.support}>

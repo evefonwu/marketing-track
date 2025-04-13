@@ -107,7 +107,12 @@
   flex-grow: 1;
 }
 
-.rowWords h3 {
+.rowWords button {
+  background: none;
+  border: none;
+  display: flex;
+  text-align: left;
+  /* border: 1px solid tomato; */
   font-family: "Noto Sans";
   font-weight: 500;
   font-size: 18px;
@@ -115,7 +120,7 @@
   color: #171717;
 }
 
-.rowWords h3:hover {
+.rowWords button:hover {
   cursor: pointer;
 }
 

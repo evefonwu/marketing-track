@@ -97,15 +97,14 @@ export default function Page() {
                             >
                               {item.header}
                             </button>
-                            {item.hasVis && (
-                              <p
-                                id={panelId}
-                                aria-labelledby={headerId}
-                                role="region"
-                              >
-                                {item.content}
-                              </p>
-                            )}
+                            <p
+                              id={panelId}
+                              aria-labelledby={headerId}
+                              role="region"
+                              hidden={!item.hasVis}
+                            >
+                              {item.content}
+                            </p>
                           </div>
                           <Image
                             aria-hidden={true}

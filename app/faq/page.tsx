@@ -87,13 +87,13 @@ export default function Page() {
                       <li key={item.id}>
                         <div className={styles.contentRow}>
                           <div className={styles.rowWords}>
-                            {/* clickable item header is contained in a <button> element with aria state and property */}
+                            {/* clickable item header is contained in a <button> element with aria state and properties */}
                             <button
                               type="button"
                               onClick={() => handleClick(item.id)}
                               id={headerId}
-                              aria-expanded={item.hasVis}
                               aria-controls={panelId}
+                              aria-expanded={item.hasVis}
                             >
                               {item.header}
                             </button>
@@ -107,18 +107,14 @@ export default function Page() {
                               </p>
                             )}
                           </div>
-                          <div className={styles.accordionControls}>
-                            <Image
-                              aria-hidden={true}
-                              className={styles.expandIcon}
-                              src={item.hasVis ? collapseIcon : expandIcon}
-                              alt={`Accordion controls to ${
-                                item.hasVis ? "collapse" : "expand"
-                              } this FAQ item.`}
-                              width={24}
-                              height={24}
-                            />
-                          </div>
+                          <Image
+                            aria-hidden={true}
+                            className={styles.expandIcon}
+                            src={item.hasVis ? collapseIcon : expandIcon}
+                            alt="icon for accordion state"
+                            width={24}
+                            height={24}
+                          />
                         </div>
                         {index < data.length - 1 ? (
                           <div className={styles.divider}>

@@ -89,11 +89,11 @@
 .contentRow {
   align-self: stretch;
   /* border: 1px solid tomato; */
-
   /* gap between rowWords and accordion controls */
+  /* gap: 16px; */
   display: flex;
-  flex-direction: row;
-  gap: 16px;
+  justify-content: space-between;
+  cursor: pointer;
 }
 
 .rowWords {
@@ -146,10 +146,6 @@
 .dividerLine {
   height: 1px;
   background-color: #d4d4d4;
-}
-
-.accordionControls {
-  cursor: pointer;
 }
 
 /* contact nested elements */
